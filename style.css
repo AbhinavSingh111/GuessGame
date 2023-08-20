@@ -1,0 +1,57 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: #a0e0ec; /* Background color for the entire page */
+}
+
+/* Create a div for the doodle rock animation */
+.doodle-rock {
+    width: 200px;
+    height: 200px;
+    background-image: url('doodle.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: rock 2s ease-in-out infinite;
+}
+
+/* Define the rocking animation */
+@keyframes rock {
+    0%, 100% {
+        transform: translateX(-50%) rotate(5deg);
+    }
+    50% {
+        transform: translateX(-50%) rotate(-5deg);
+    }
+}
+
+#userInputForm {
+    display: flex;
+    flex-direction: column;
+    background-color: #f86b6b; /* Background color for the form */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    display: flex;
+    flex-direction: column;
+    background-color: #5fd3ea;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#output {
+    margin-top: 20px;
+}
